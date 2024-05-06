@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox prefHeight="642.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CommercialSpacePageController">
+   <children>
+      <HBox spacing="8.0">
+         <children>
+            <TextField fx:id="locationTF" layoutX="160.0" layoutY="10.0" maxWidth="400.0" promptText="Location" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="floorSpaceTF" layoutX="309.0" layoutY="10.0" prefWidth="160.0" promptText="Floor Space" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#searchProperty" styleClass="btn-primary" text="Search">
+               <graphic>
+                  <SVGPath content="m13.553 12.752-3.332-3.466a5.634 5.634 0 0 0 1.326-3.633C11.547 2.536 9.011 0 5.895 0S.242 2.536.242 5.653s2.536 5.652 5.653 5.652c1.17 0 2.285-.353 3.238-1.023l3.357 3.492c.14.146.33.226.532.226a.733.733 0 0 0 .51-.206.738.738 0 0 0 .021-1.042zM5.895 1.475c2.303 0 4.178 1.874 4.178 4.178S8.198 9.83 5.895 9.83c-2.304 0-4.178-1.874-4.178-4.178S3.59 1.475 5.895 1.475z" fill="WHITE" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="commercialSpaceTable" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="Location" prefWidth="304.53337502479553" text="Location" />
+            <TableColumn fx:id="Rent" prefWidth="164.2666778564453" text="Rent" />
+            <TableColumn fx:id="FloorSpace" prefWidth="127.99993896484375" text="Floor Space" />
+            <TableColumn fx:id="FireExit" prefWidth="128.79998779296875" text="Fire Exit" />
+            <TableColumn fx:id="Available" maxWidth="56.800048828125" prefWidth="56.800048828125" text="#" />
+         </columns>
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </TableView>
+      <HBox alignment="CENTER" spacing="8.0">
+         <children>
+            <TextField fx:id="leaseForUserTF" layoutX="10.0" layoutY="10.0" prefWidth="120.0" promptText="Lease for user" />
+            <DatePicker fx:id="leaseStartDatePicker" promptText="Start date" />
+            <TextField fx:id="leaseDurationTF" layoutX="309.0" layoutY="10.0" prefWidth="160.0" promptText="Duration" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#leaseProperty" styleClass="btn-primary" text="Lease" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" top="8.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

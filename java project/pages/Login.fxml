@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <HBox spacing="12.0">
+         <children>
+            <StackPane>
+               <children>
+                  <SVGPath content="m14.393 23.939-.001-8.514-2.377.993c-1.458.61-2.408 1.535-2.407 3.116V28l2.422-1.012c1.305-.546 2.363-1.635 2.363-3.049zm0-15.425L14.392 0l-2.377.994c-1.458.61-2.408 1.535-2.407 3.115v8.466l2.422-1.012c1.305-.546 2.363-1.634 2.363-3.049z" fill="#6ee7b7" />
+                  <SVGPath content="m0 16.226.001-8.514 2.377.993c1.458.61 2.408 1.535 2.407 3.116v8.466l-2.422-1.012C1.058 18.729 0 17.639 0 16.226Zm19.215 0 .001-8.514 2.377.993c1.458.61 2.408 1.535 2.407 3.116v8.466l-2.422-1.012c-1.305-.546-2.363-1.635-2.363-3.049Z" fill="#10b981" />
+               </children>
+            </StackPane>
+            <HBox spacing="3.0">
+               <children>
+                  <SVGPath content="M48.151 2.896v13.28q0 3.36-.832 5.408-.832 2.016-2.752 2.944-1.888.896-5.056.896-3.36 0-5.376-.896-2.016-.928-2.912-2.944-.896-2.048-.896-5.408V2.896h4.896v13.28q0 2.08.352 3.264.384 1.152 1.28 1.632t2.4.48 2.368-.48q.896-.48 1.248-1.632.384-1.184.384-3.264V2.896zm14.624 0q.608 0 1.056.352.48.352.64.928l6.4 20.8h-4.992L61.367 8.752l-.256-1.088q-.128-.576-.224-1.088h-.864q-.096.512-.224 1.088-.096.544-.256 1.088l-4.512 16.224h-5.024l6.432-20.8q.16-.576.608-.928.48-.352 1.088-.352zm3.392 12.576v3.68H54.711v-3.68zM81.591 2.576q3.104 0 4.864.64t2.496 2.208q.768 1.568.768 4.384 0 2.816-.736 4.384-.704 1.568-2.336 2.208-1.632.608-4.416.608-1.472 0-2.88-.128t-2.624-.32-2.08-.384q-.864-.224-1.184-.416l.096-2.432h7.936q1.28-.032 1.984-.32.736-.288 1.024-1.056.32-.768.32-2.144 0-1.408-.32-2.176-.288-.768-1.024-1.056-.704-.32-1.984-.32-2.944 0-5.056.032t-2.848.128l-.48-3.52q1.344-.16 2.528-.224t2.56-.064q1.408-.032 3.392-.032zm-3.584.32v22.08h-4.896V2.896z" fill="#10b981"/>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="40.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefWidth="320.0" spacing="32.0" styleClass="form">
+               <children>
+                  <Label styleClass="form-title" text="Log In" />
+                  <VBox spacing="32.0">
+                     <children>
+                        <VBox spacing="8.0">
+                           <children>
+                              <Label text="User ID" />
+                              <TextField fx:id="loginUID" promptText="Enter User ID" />
+                              <Label fx:id="userNotFoundError" layoutX="10.0" layoutY="10.0" styleClass="error" text="User not found!" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" spacing="8.0">
+                           <children>
+                              <Label text="Password" />
+                              <PasswordField fx:id="uPasswordField" promptText="Enter Password" />
+                              <Label fx:id="passwordError" layoutX="10.0" layoutY="10.0" styleClass="error" text="Incorrect Password!" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#logIn" styleClass="btn-primary" text="Log in" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="80.0">
+               <children>
+                  <VBox maxWidth="-Infinity" prefWidth="1.0" style="-fx-border-width: 0 1 0 0; -fx-border-color: #eaeaea;" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefWidth="320.0" spacing="32.0" styleClass="form">
+               <children>
+                  <Label styleClass="form-title" text="Sign Up" />
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="userNameField" promptText="Enter Name" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Age" />
+                        <TextField fx:id="userAgeField" promptText="Enter Age" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#signUp" styleClass="btn-primary" text="Create Account" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
