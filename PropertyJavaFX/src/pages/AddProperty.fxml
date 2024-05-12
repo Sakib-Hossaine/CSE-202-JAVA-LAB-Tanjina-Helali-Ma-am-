@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+
+<TabPane maxWidth="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddPropertyController">
+   <tabs>
+      <Tab text="Apartment">
+         <graphic>
+            <SVGPath content="M12.017 19.979H8.195a.852.852 0 0 1-.849-.85v-4.67H5.52v4.67c0 .468-.382.85-.85.85H.85a.852.852 0 0 1-.85-.85V9.11c0-.298.17-.552.425-.722l5.562-3.312a.771.771 0 0 1 .85 0l5.562 3.312c.255.17.425.424.425.722v10.064c.042.424-.34.807-.807.807zm-2.972-1.656h2.165V9.576L6.454 6.73 1.7 9.576v8.747h2.165v-4.671c0-.467.382-.85.85-.85h3.481c.468 0 .85.383.85.85zm10.106 1.656h-6.582a.852.852 0 0 1-.85-.85c0-.466.383-.849.85-.849H18.3V1.677H8.832v4.841c0 .467-.382.85-.85.85s-.848-.383-.848-.85V.871c0-.467.382-.85.849-.85H19.15c.467 0 .85.383.85.85v18.3c0 .425-.383.807-.85.807z" scaleX="0.8" scaleY="0.8" />
+         </graphic>
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="form">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Number of rooms">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox spacing="12.0">
+                           <children>
+                              <TextField fx:id="bedroomTF" prefHeight="32.0" promptText="Bedroom" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="washroomTF" layoutX="10.0" layoutY="10.0" prefHeight="32.0" promptText="Washroom" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Location">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="apartmentLocationTF" prefHeight="32.0" promptText="Apartment Location">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Rent">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="apartmentRentTF" prefHeight="32.0" promptText="Apartment Rent">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Floor space">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="apartmentSizeTF" prefHeight="32.0" promptText="Apartment Size">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="hasGeneratorCheckbox" mnemonicParsing="false" text="Has Generator">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <Button mnemonicParsing="false" onAction="#addApartment" prefHeight="32.0" prefWidth="140.0" text="Add Property" />
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab text="Commercial Space">
+        <content>
+            <VBox styleClass="form">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Location">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="commercialLocationTF" prefHeight="32.0" promptText="Commercial Space Location">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Rent">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="commercialRentTF" prefHeight="32.0" promptText="Commercial Space Rent">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Floor space">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="commercialSizeTF" prefHeight="32.0" promptText="Commercial Space Size">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="hasFireExitCheckbox" mnemonicParsing="false" text="Has Fire Exit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <Button mnemonicParsing="false" onAction="#addCommercialSpace" prefHeight="32.0" prefWidth="140.0" text="Add Property" />
+               </children>
+            </VBox>
+        </content>
+         <graphic>
+            <SVGPath content="M19.108 19.979H.849a.852.852 0 0 1-.85-.85c0-.466.383-.849.85-.849H19.15c.467 0 .85.383.85.85-.043.467-.425.849-.892.849zm-6.624-.34a.852.852 0 0 1-.85-.849v-3.949c0-.467.383-.85.85-.85.467 0 .85.383.85.85v3.949c0 .467-.383.85-.85.85zm5.35.34H7.176a.852.852 0 0 1-.85-.85V8.6c0-.255.128-.467.298-.637s.425-.213.68-.17l10.7 2.038c.383.085.68.425.68.807v8.493c0 .467-.382.849-.85.849zm-9.851-1.656h9.002v-7.006L7.983 9.618zm4.628 1.656h-10.7a.852.852 0 0 1-.85-.85V4.396c0-.34.212-.68.552-.807L12.314.064a.823.823 0 0 1 .764.127c.213.17.34.425.34.68v8.662c0 .467-.382.849-.85.849s-.849-.382-.849-.85V2.018L2.76 4.989v13.333h9.852c.467 0 .85.382.85.85-.043.424-.425.806-.85.806z" />
+         </graphic>
+      </Tab>
+   </tabs>
+</TabPane>

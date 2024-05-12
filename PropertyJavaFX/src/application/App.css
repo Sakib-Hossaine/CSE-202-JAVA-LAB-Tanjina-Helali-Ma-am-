@@ -1,0 +1,169 @@
+/* BASE Styles */
+@font-face {
+  -fx-font-family: "Mulish";
+  src: url("../fonts/Mulish-Regular.ttf");
+}
+@font-face {
+  -fx-font-family: "Mulish Medium";
+  src: url("../fonts/Mulish-Medium.ttf");
+}
+@font-face {
+  -fx-font-family: "Mulish SemiBold";
+  src: url("../fonts/Mulish-SemiBold.ttf");
+}
+@font-face {
+  -fx-font-family: "Mulish Bold";
+  src: url("../fonts/Mulish-Bold.ttf");
+}
+@font-face {
+  -fx-font-family: "Mulish ExtraBold";
+  src: url("../fonts/Mulish-ExtraBold.ttf");
+}
+
+* {
+  -fx-primary-color: #10b981;
+  -fx-primary-text-color: #059669;
+}
+
+.root {
+  -fx-font-size: 11pt;
+  -fx-font-family: "Mulish";
+  -fx-border-color: #e7e7e9;
+  -fx-background-color: transparent;
+}
+
+.text-field,
+.password-field {
+  -fx-focus-color: -fx-primary-color;
+  -fx-faint-focus-color: #10b9811a;
+  -fx-background-color: transparent;
+  -fx-border-color: #d1d5db;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+  -fx-pref-height: 36;
+  -fx-prompt-text-fill: #a1a1aa;
+}
+
+/* utility classes */
+.btn,
+.button {
+  -fx-font-family: "Mulish Medium";
+  -fx-graphic-text-gap: 8;
+  -fx-pref-height: 36;
+  -fx-padding: 0 12;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+}
+
+.btn-primary {
+  -fx-background-color: -fx-primary-color;
+  -fx-text-fill: white;
+}
+
+.page-title {
+  -fx-font-family: "Mulish Bold";
+  -fx-font-size: 16pt;
+  -fx-padding: 0 0 24 0;
+}
+
+.tab-header-area {
+  -fx-padding: 0;
+}
+.tab-header-area .tab-header-background {
+  -fx-background-color: transparent;
+}
+
+.tab-header-area .headers-region {
+  -fx-spacing: 12;
+}
+
+.tab-header-area .headers-region {
+  -fx-padding: 2 2 2 0;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-background-color: #f4f4f5;
+}
+
+.tab-pane .tab {
+  -fx-padding: 6 12 6 12;
+  -fx-background-insets: 0 0 0 2;
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+  -fx-background-color: transparent;
+}
+
+.icon {
+  -fx-fill: #5f5f5f;
+}
+
+.tab-pane .tab:selected {
+  -fx-background-color: white;
+}
+
+.tab-pane .tab:selected .tab-label {
+  -fx-text-fill: -fx-primary-text-color;
+}
+
+.tab-pane .tab:selected SVGPath {
+  -fx-fill: -fx-primary-color;
+}
+
+.tab-pane .tab:selected .focus-indicator {
+  -fx-border-width: 0;
+  -fx-border-insets: 0 0 0 0;
+  -fx-border-radius: 0;
+}
+
+.form {
+  -fx-spacing: 32;
+  -fx-padding: 20 0 0 0;
+}
+
+.form .label,
+.form .check-box {
+  -fx-font-family: "Mulish SemiBold";
+}
+
+.form .label.form-title {
+  -fx-font-family: "Mulish Bold";
+  -fx-font-size: 16pt;
+  -fx-padding: 0 0 16 0;
+}
+
+.form .label.error {
+  -fx-font-family: "Mulish SemiBold";
+  -fx-font-size: 10pt;
+  -fx-text-fill: #f43f5e;
+}
+
+.form .button {
+  -fx-pref-width: 200;
+  -fx-background-color: -fx-primary-color;
+  -fx-text-fill: white;
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+  -fx-min-height: 36;
+}
+
+/* Sidebar Navigation Styles */
+.nav-menu .label {
+  -fx-padding: 0 0 4 0;
+  -fx-text-fill: #a3a3a3;
+  -fx-font-family: "Mulish SemiBold";
+  -fx-font-size: 10pt;
+}
+
+.nav-menu .button {
+  -fx-font-family: "Mulish Medium";
+  -fx-background-color: transparent;
+  -fx-graphic-text-gap: 10;
+  -fx-alignment: center-left;
+}
+
+.nav-menu .button:hover {
+  -fx-background-color: #f4f4f5;
+}
+
+.nav-menu .button.active {
+  -fx-text-fill: -fx-primary-text-color;
+}

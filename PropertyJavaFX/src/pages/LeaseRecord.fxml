@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox prefHeight="642.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LeaseRecordsController">
+   <children>
+      <HBox fx:id="searchBox" spacing="8.0">
+         <VBox.margin>
+            <Insets bottom="8.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="idTextField" prefWidth="220.0" promptText="Search by User / Property ID" />
+            <Button mnemonicParsing="false" onAction="#searchRecord" styleClass="btn-primary" text="Search">
+               <graphic>
+                  <SVGPath content="m13.553 12.752-3.332-3.466a5.634 5.634 0 0 0 1.326-3.633C11.547 2.536 9.011 0 5.895 0S.242 2.536.242 5.653s2.536 5.652 5.653 5.652c1.17 0 2.285-.353 3.238-1.023l3.357 3.492c.14.146.33.226.532.226a.733.733 0 0 0 .51-.206.738.738 0 0 0 .021-1.042zM5.895 1.475c2.303 0 4.178 1.874 4.178 4.178S8.198 9.83 5.895 9.83c-2.304 0-4.178-1.874-4.178-4.178S3.59 1.475 5.895 1.475z" fill="WHITE" />
+               </graphic>
+            </Button>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#leaseOver" styleClass="btn-primary" text="Lease over" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <TableView fx:id="leaseRecordTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="propertyID" prefWidth="149.60003662109375" text="Property ID" />
+          <TableColumn fx:id="userID" minWidth="0.79998779296875" prefWidth="116.0" text="User ID" />
+            <TableColumn fx:id="leaseStartDate" minWidth="0.79998779296875" prefWidth="151.20001220703125" text="Lease Start Date" />
+            <TableColumn fx:id="duration" minWidth="0.79998779296875" prefWidth="116.0" text="Duration" />
+            <TableColumn fx:id="note" minWidth="0.79998779296875" prefWidth="248.79998779296875" text="Note" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
